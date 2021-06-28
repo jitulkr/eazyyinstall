@@ -22,7 +22,7 @@ java(){
 
 #vscode(){}
 
-#codeblocks(){
+codeblocks(){
 	sudo add-apt-repository ppa:damien-moore/codeblocks-stable -y
 	sudo apt update -y
 	sudo apt install codeblocks codeblocks-contrib -y
@@ -130,10 +130,15 @@ do
 				p4)echo -e "\e[31mNode Js Package installation selected.\nPlease wait, processing your installation...\e[0m"
 				;;
 
-				p5)echo -e "\e[31mExit to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				p5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
 				break
 				exit 0
 				;;
+				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo " "
+
+				echo " "
+                ;;
 			esac
 			break
 			done
@@ -166,8 +171,12 @@ do
 				e4)echo -e "\e[31mCodeBlocks Editor installation selected.\nPlease wait, processing your installation...\e[0m"
 				;;
 
-				e5)echo -e "\e[31mExit to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				e5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
 				exit 0
+				;;
+
+				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo " "
 				;;
 			esac
 			break
@@ -201,8 +210,14 @@ do
 				b4)echo -e "\e[31mMicrosoft Edge Browser installation selected.\nPlease wait, processing your installation...\e[0m"
 				;;
 
-				b5)echo -e "\e[31mExit to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				b5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
 				exit 0
+				;;
+
+				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo " "
+
+				echo " "
 				;;
 			esac
 			break
@@ -240,8 +255,14 @@ do
 				smp
 				;;
 
-				b5)echo -e "\e[31mExit to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				b5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
 				exit 0
+				;;
+
+				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo " "
+
+				echo " "
 				;;
 			esac
 			break
