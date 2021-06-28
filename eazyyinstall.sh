@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 update(){
 	sudo apt-get update -y && apt-get upgrade -y
 	}
@@ -18,7 +18,7 @@ do
 	echo -e "\e[31mPlease select your option-\e[0m"
 	echo " "
 	echo -e "\e[34m1) Install Software Development Packages\e[0m"
-	echo -e "\e[32m2) Install Code Editors\e[0m"
+	echo -e "\e[32m2) Install Code & Text Editors\e[0m"
 	echo -e "\e[36m3) Install Web Browsers\e[0m"
 	echo -e "\e[95m4) Install Media Players\e[0m"
 	echo -e "\e[96m5) Exit the installer script\e[0m"
@@ -26,19 +26,65 @@ do
 	read option
 
 	case "$option" in
-		1)echo -e -e "\e[31mSoftware Develoment Package Installation selected.\e[0m"
-            	#echo -e "\e[34m1) Install Python Packages\e[0m"
-	        #echo -e "\e[32m2) Install Code Editors\e[0m"
-	        #echo -e "\e[36m3) Install Web Browsers\e[0m"
-	        #echo -e "\e[95m4) Install Media Players\e[0m"
-	        #echo -e "\e[96m5) Exit the installer script\e[0m"
-        #echo -e "\e[31mHTTP installation selected.\nPlease wait, processing your installation...\e[0m"
-		http
+		1)	
+			while ture
+			echo -e -e "\e[31mSoftware Develoment Package Installation selected.\e[0m"
+			echo -e -e "\e[31mPlease select the package to be installed>>>>\e[0m"
+			echo " "
 
-		;;
-		2)  #echo -e "\e[31minstallation selected.\nPlease wait, processing your installation...\e[0m"
-                ftp
-                ;;
+			echo " "
+        	echo -e "\e[34m1) Install Python Packages\e[0m"
+	    	echo -e "\e[32m2) Install Java Packages\e[0m"
+	    	echo -e "\e[36m3) Install PHP Packages\e[0m"
+	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+			echo " "
+			read selection1
+
+			case "$selection1" in
+				p1)echo -e "\e[31mPython Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				;;
+
+				p2)echo -e "\e[31mJava Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				;;
+
+				p3)echo -e "\e[31mPHP Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				;;
+
+				p4)echo -e "\e[31mExit to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				Return
+				;;
+			esac
+
+		2)	
+			while ture
+			echo -e -e "\e[31mCode & Text Editor Installation selected.\e[0m"
+			echo -e -e "\e[31mPlease select the editor to be installed>>>>\e[0m"
+			echo " "
+
+			echo " "
+        	echo -e "\e[34m1) Install Vim Editor\e[0m"
+	    	echo -e "\e[32m2) Install NotePad++ Editor\e[0m"
+	    	echo -e "\e[36m3) Install VS Code Editor\e[0m"
+	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+			echo " "
+			read selection2
+
+			case "$selection2"in
+				e1)echo -e "\e[31mVim Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				;;
+
+				e2)echo -e "\e[31mNotePad++ Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				;;
+
+				e3)echo -e "\e[31mVS Code Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				;;
+
+				e4)echo -e "\e[31mExit to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				Return
+				;;
+			esac
+			;;
+                
 		3)  #echo -e "\e[31m installation selected.\nPlease wait, processing your installation...\e[0m"
                 ssh
                 ;;
