@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 update(){
 	sudo apt-get update -y && apt-get upgrade -y
 	}
@@ -7,11 +7,11 @@ update(){
 while  true
 do
 	echo -e "\e[33m#####################################################\e[0m"
-	echo -e "\e[33m#\e[0m            \e[38;5;41mWelcome to EazyyInstall Script\e[0m            \e[33m#"
+	echo -e "\e[33m#\e[0m            \e[38;5;41mWelcome to EazyyInstall Script\e[0m         \e[33m#"
 	echo -e "\e[33m#####################################################\e[0m"
 	echo " "
-	echo -e  "\e[38;5;32m#Author: JitulKumarL & Luknu Lomri#\e[0m"
-	echo -e  "\e[95m#Software Installation Script#\e[0m"
+	echo -e  "\e[38;5;32m#Author: Jitul Kumar Laphong & Luknu Lomri#\e[0m"
+	echo -e  "\e[95m#Automated Software Installation Script for Ubuntu Operating System#\e[0m"
 	echo " "
 
 	echo " "
@@ -27,7 +27,7 @@ do
 
 	case "$option" in
 		1)	
-			while ture
+			while true ; do
 			echo -e -e "\e[31mSoftware Develoment Package Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the package to be installed>>>>\e[0m"
 			echo " "
@@ -51,12 +51,13 @@ do
 				;;
 
 				p4)echo -e "\e[31mExit to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
-				Return
+				break
 				;;
 			esac
-
+			done
+			;;
 		2)	
-			while ture
+			while true ; do
 			echo -e -e "\e[31mCode & Text Editor Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the editor to be installed>>>>\e[0m"
 			echo " "
@@ -69,7 +70,7 @@ do
 			echo " "
 			read selection2
 
-			case "$selection2"in
+			case "$selection2" in
 				e1)echo -e "\e[31mVim Editor installation selected.\nPlease wait, processing your installation...\e[0m"
 				;;
 
@@ -83,6 +84,7 @@ do
 				Return
 				;;
 			esac
+			done
 			;;
                 
 		3)  #echo -e "\e[31m installation selected.\nPlease wait, processing your installation...\e[0m"
