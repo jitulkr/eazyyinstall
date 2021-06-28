@@ -54,6 +54,7 @@ do
 				break
 				;;
 			esac
+			break
 			done
 			;;
 		2)	
