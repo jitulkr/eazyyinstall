@@ -12,7 +12,7 @@
 1) First, Open the terminal:
 ![EazyyInstall Demo](demo/terminal.gif)
 
-2) Next, we need to check if we have *git* already installed. Type the following command in terminal and hit enter to do that:
+2) Next, we need to check if we already have *git* installed. Type the following command in terminal and hit enter to do that:
 ```
 sudo apt-cache policy git
 ```
