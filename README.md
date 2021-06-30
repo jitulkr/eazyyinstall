@@ -1,5 +1,4 @@
-# **EazyyInstall**
---------------
+# EazyyInstall
 
 ### A shell script to automate software installation in Ubuntu Linux environment
 
@@ -39,11 +38,13 @@ git:
 
 4) Next, download and extract this script as shown below.
 ![EazyyInstall Demo](demo/git-download.gif)
-**or** Type the command below inside terminal to do that automatically.
+                **OR**
+Type the command below inside terminal to do that automatically.
 ```
 git clone https://github.com/jitulkr/eazyyinstall.git
 ```
 The EazyyInstall script is now downloaded to the *Downloads* folder. Close the terminal.
+
 
 5) Go inside the **eazyyinstall** directory and open a new terminal here.
 ![EazyyInstall Demo](demo/directory-cd.gif)
