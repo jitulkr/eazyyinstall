@@ -7,7 +7,7 @@
 
 -------------
 # **Important!!**
-## Please follow Each step below to have an error free installation.
+## To ensure error free installation, Please follow Each step below.
 
 1) First, Open the terminal:
 ![EazyyInstall Demo](demo/terminal.gif)
