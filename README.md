@@ -8,7 +8,7 @@
 
 -------------
 # **Important!!**
-## Please follow the steps below to have an error free installation.
+## Please follow Each step below to have an error free installation.
 
 1) First, install git by using the following command:
  ```
