@@ -1,1 +1,1 @@
-# eazyyinstall
+# EazyyInstall
