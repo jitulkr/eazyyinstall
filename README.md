@@ -15,31 +15,44 @@
 
 2) Next, we need to check if we have *git* already installed. Type the following command in terminal and hit enter to do that:
 ```
-sudo apt cache git
+sudo apt-cache policy git
 ```
-If *git* is already installed, terminal should give an output like below:
-
-
-3) If *git* is not installed, we need to install *git*. To do so, typing the following command in the terminal and hit enter :
+If *git* is already installed, terminal should give an output something like this:
+```
+git:
+  Installed: 1:2.17.1-1ubuntu0.8
+  Candidate: 1:2.17.1-1ubuntu0.8
+  Version table:
+ *** 1:2.17.1-1ubuntu0.8 500
+        500 http://in.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages
+        500 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages
+        100 /var/lib/dpkg/status
+     1:2.17.0-1ubuntu1 500
+        500 http://in.archive.ubuntu.com/ubuntu bionic/main amd64 Packages
  ```
- sudo apt-get install git
+
+
+3) If *git* is not installed, we need to install *git*. To do so, type the following command in the terminal and hit enter :
+ ```
+ sudo apt-get install git -y
  ```
 
-2) Next, download and extract this script as shown below.
-![EazyyInstall Demo](demo/git-clone.gif)
-**or** Use the command below to do that automatically via terminal.
+4) Next, download and extract this script as shown below.
+![EazyyInstall Demo](demo/git-download.gif)
+**or** Type the command below inside terminal to do that automatically.
 ```
 git clone https://github.com/jitulkr/eazyyinstall.git
 ```
+The EazyyInstall script is now downloaded to the *Downloads* folder. Close the terminal.
 
-3) Go inside the **eazyyinstall** directory.
+5) Go inside the **eazyyinstall** directory and open a new terminal here.
 ![EazyyInstall Demo](demo/directory-cd.gif)
-4) Use the following command to add Execution permission:
+6) Type the following command in terminal to add Execution permission:
 ```
 sudo chmod +x eazyyinstall.sh
 ```
 5) Enter your Ubuntu user *password* when requested.
-6) To Run the **EazyyInstall** script, use the following command:
+6) To Run the **EazyyInstall** script, type the following command in terminal:
 ```
 sudo ./eazyyinstall.sh
 ```
