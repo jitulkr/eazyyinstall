@@ -70,7 +70,9 @@ smp(){
 
 while  true
 do
+		echo " "
 
+		echo " "
 		echo -e "\e[92m \e[1m ########    ###    ######## ##    ## ##    ## #### ##    ##  ######  ########     ##      ##       ##  "
 		echo -e "\e[92m \e[1m ##         ## ##        ##   ##  ##   ##  ##   ##  ###   ## ##    ##    ##       ####     ##       ##  "
 		echo -e "\e[92m \e[1m ##        ##   ##      ##     ####     ####    ##  ####  ## ##          ##      ##  ##    ##       ##  "
@@ -78,10 +80,6 @@ do
 		echo -e "\e[92m \e[1m ##       #########   ##        ##       ##     ##  ##  ####       ##    ##    ##########  ##       ##  "
 		echo -e "\e[92m \e[1m ##       ##     ##  ##         ##       ##     ##  ##   ### ##    ##    ##    ##      ##  ##       ##    "
 		echo -e "\e[92m \e[1m ######## ##     ## ########    ##       ##    #### ##    ##  ######     ##    ##      ##  ######## ########  "
-		
-                                                                             
-                                                                                  
-
 
 	#echo -e "\e[33m#####################################################\e[0m"
 	#echo -e "\e[33m#\e[0m            \e[38;5;41mWelcome to EazyyInstall Script\e[0m         \e[33m#"
@@ -104,6 +102,9 @@ do
 
 	case "$option" in
 		1)	while true ; do
+			echo " "
+
+			echo " "
 			echo -e -e "\e[31m\aSoftware Develoment Package Installation selected.\e[0m"
 			echo -e -e "\e[33mPlease select the package to be installed>>>>\e[0m"
 			echo " "
@@ -145,6 +146,9 @@ do
 			;;
 
 		2)	while true ; do
+			echo " "
+
+			echo " "
 			echo -e -e "\e[31mCode & Text Editor Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the editor to be installed>>>>\e[0m"
 			echo " "
@@ -184,6 +188,9 @@ do
 			;;
                 
 		3)  while true ; do
+			echo " "
+
+			echo " "
 			echo -e -e "\e[31mWeb Browser Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the browser to be installed>>>>\e[0m"
 			echo " "
@@ -225,6 +232,9 @@ do
 			;;
 		
 		4)  while true ; do
+			echo " "
+
+			echo " "
 			echo -e -e "\e[31mMedia Players Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the MEdia Player to be installed>>>>\e[0m"
 			echo " "
