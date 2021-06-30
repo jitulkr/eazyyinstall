@@ -7,4 +7,4 @@
 
 
 ## Important!!
-##### Please follow the steps below to have a error free 
+##### Please follow the steps below to have a error free installation.
