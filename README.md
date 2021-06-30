@@ -7,4 +7,7 @@
 
 
 ## Important!!
-##### Please follow the steps below to have a error free installation.
+##### Please follow the steps below to have an error free installation.
+
+First, Clone this script by following the screenshot below.
+![EazyyInstall Demo](demo/git-clone.gif)
