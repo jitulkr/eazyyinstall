@@ -3,7 +3,10 @@ update(){
 	sudo apt-get update -y && apt-get upgrade -y
 	}
 
-#python(){}
+python(){
+	sudo apt update -y
+	sudo apt-get install python
+}
 
 java(){
 	sudo apt update -y
@@ -13,12 +16,20 @@ java(){
 }
 
 #php(){}
-#hi from luknu
-#nodejs(){}
+nodejs(){
+	sudo apt install nodejs
+	sudo apt update -y
+}
 
-#vim(){}
+vim(){
+	sudo apt-get install vim
+	sudo apt update -y 
+}
 
-#notepad++(){}
+notepad++(){
+	sudo apt update -y
+	sudo snap install notepad-plus-plus
+}
 
 #vscode(){}
 
@@ -28,7 +39,11 @@ codeblocks(){
 	sudo apt install codeblocks codeblocks-contrib -y
 }
 
-#chrome(){}
+chrome(){
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo apt install ./google-chrome-stable_current_amd64.deb
+
+}
 
 #firefox(){}
 
@@ -70,9 +85,7 @@ smp(){
 
 while  true
 do
-		echo " "
 
-		echo " "
 		echo -e "\e[92m \e[1m ########    ###    ######## ##    ## ##    ## #### ##    ##  ######  ########     ##      ##       ##  "
 		echo -e "\e[92m \e[1m ##         ## ##        ##   ##  ##   ##  ##   ##  ###   ## ##    ##    ##       ####     ##       ##  "
 		echo -e "\e[92m \e[1m ##        ##   ##      ##     ####     ####    ##  ####  ## ##          ##      ##  ##    ##       ##  "
@@ -80,6 +93,10 @@ do
 		echo -e "\e[92m \e[1m ##       #########   ##        ##       ##     ##  ##  ####       ##    ##    ##########  ##       ##  "
 		echo -e "\e[92m \e[1m ##       ##     ##  ##         ##       ##     ##  ##   ### ##    ##    ##    ##      ##  ##       ##    "
 		echo -e "\e[92m \e[1m ######## ##     ## ########    ##       ##    #### ##    ##  ######     ##    ##      ##  ######## ########  "
+		
+                                                                             
+                                                                                  
+
 
 	#echo -e "\e[33m#####################################################\e[0m"
 	#echo -e "\e[33m#\e[0m            \e[38;5;41mWelcome to EazyyInstall Script\e[0m         \e[33m#"
@@ -102,9 +119,6 @@ do
 
 	case "$option" in
 		1)	while true ; do
-			echo " "
-
-			echo " "
 			echo -e -e "\e[31m\aSoftware Develoment Package Installation selected.\e[0m"
 			echo -e -e "\e[33mPlease select the package to be installed>>>>\e[0m"
 			echo " "
@@ -146,9 +160,6 @@ do
 			;;
 
 		2)	while true ; do
-			echo " "
-
-			echo " "
 			echo -e -e "\e[31mCode & Text Editor Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the editor to be installed>>>>\e[0m"
 			echo " "
@@ -188,9 +199,6 @@ do
 			;;
                 
 		3)  while true ; do
-			echo " "
-
-			echo " "
 			echo -e -e "\e[31mWeb Browser Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the browser to be installed>>>>\e[0m"
 			echo " "
@@ -232,9 +240,6 @@ do
 			;;
 		
 		4)  while true ; do
-			echo " "
-
-			echo " "
 			echo -e -e "\e[31mMedia Players Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the MEdia Player to be installed>>>>\e[0m"
 			echo " "
