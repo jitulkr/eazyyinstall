@@ -15,13 +15,22 @@ java(){
 	source /etc/environment
 }
 
-#php(){}
+php(){
+	sudo apt install php libapache2-mod-php
+	sudo systemctl restart apache2
+	sudo apt install php-fpm
+	systemctl status php7.2-fpm
+	sudo apt update -y
+}
 nodejs(){
 	sudo apt install nodejs
 	sudo apt update -y
 }
 
-#vim(){}
+vim(){
+	sudo snap install vscode --classic
+	sudo apt update -y
+}
 
 notepad++(){
 	sudo apt update -y
