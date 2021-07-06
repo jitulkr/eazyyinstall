@@ -21,17 +21,17 @@ nodejs(){
 	sudo apt update -y
 }
 
-vim(){
-	sudo apt-get install vim
-	sudo apt update -y 
-}
+#vim(){}
 
 notepad++(){
 	sudo apt update -y
 	sudo snap install notepad-plus-plus
 }
 
-#vscode(){}
+vscode(){
+	sudo snap install vscode --classic
+	sudo apt update -y
+}
 
 codeblocks(){
 	sudo add-apt-repository ppa:damien-moore/codeblocks-stable -y
