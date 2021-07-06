@@ -64,7 +64,9 @@ brave(){
 	sudo apt install brave-browser
 }
 
-#edge(){}
+edge(){
+	sudo apt update -y
+}
 
 vlc(){
 	sudo apt install snap -y
