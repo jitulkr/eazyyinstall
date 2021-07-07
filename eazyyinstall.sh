@@ -69,6 +69,9 @@ brave(){
 
 edge(){
 	sudo apt update -y
+	sudo apt update
+    sudo apt install software-properties-common apt-transport-https wget
+
 }
 
 vlc(){
