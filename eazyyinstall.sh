@@ -24,7 +24,7 @@ php(){
 }
 nodejs(){
 	sudo apt update -y
-	sudo apt update -y
+	sudo apt install nodejs
 }
 
 vim(){
