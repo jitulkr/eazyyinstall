@@ -28,8 +28,8 @@ nodejs(){
 }
 
 vim(){
-	sudo snap install vscode --classic
 	sudo apt update -y
+	sudo snap install vscode --classic
 }
 
 notepad++(){
