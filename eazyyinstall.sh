@@ -16,15 +16,15 @@ java(){
 }
 
 php(){
+	sudo apt update -y
 	sudo apt install php libapache2-mod-php
 	sudo systemctl restart apache2
 	sudo apt install php-fpm
 	systemctl status php7.2-fpm
-	sudo apt update -y
 }
 nodejs(){
-	sudo apt install nodejs
 	sudo apt update -y
+	sudo apt install nodejs
 }
 
 vim(){
@@ -38,8 +38,8 @@ notepad++(){
 }
 
 vscode(){
-	sudo snap install vscode --classic
 	sudo apt update -y
+	sudo snap install vscode --classic
 }
 
 codeblocks(){
@@ -55,8 +55,8 @@ chrome(){
 }
 
 firefox(){
-	$ sudo apt install firefox
 	sudo apt update -y
+	sudo apt install firefox
 }
 
 brave(){
@@ -69,9 +69,7 @@ brave(){
 
 edge(){
 	sudo apt update -y
-	sudo apt update
     sudo apt install software-properties-common apt-transport-https wget
-
 }
 
 vlc(){
