@@ -54,7 +54,10 @@ chrome(){
 
 }
 
-#firefox(){}
+firefox(){
+	$ sudo apt install firefox
+	sudo apt update -y
+}
 
 brave(){
 	sudo apt install apt-transport-https curl -y
