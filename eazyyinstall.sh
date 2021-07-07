@@ -13,7 +13,7 @@ java(){
 }
 
 #php(){}
-#hi from luknu
+
 #nodejs(){}
 
 #vim(){}
@@ -81,9 +81,8 @@ do
 		echo -e "\e[92m \e[1m ##       ##     ##  ##         ##       ##     ##  ##   ### ##    ##    ##    ##      ##  ##       ##    "
 		echo -e "\e[92m \e[1m ######## ##     ## ########    ##       ##    #### ##    ##  ######     ##    ##      ##  ######## ########  "
 
-	#echo -e "\e[33m#####################################################\e[0m"
-	#echo -e "\e[33m#\e[0m            \e[38;5;41mWelcome to EazyyInstall Script\e[0m         \e[33m#"
-	#echo -e "\e[33m#####################################################\e[0m"
+
+
 	echo " "
 	echo -e  "\e[38;5;32m#Author: Jitul Kumar Laphong & Luknu Lomri#\e[0m"
 	echo -e  "\e[95m#Automated Software Installation Script for Ubuntu Operating System#\e[0m"
@@ -110,11 +109,11 @@ do
 			echo " "
 
 			echo " "
-        	echo -e "\e[34m1) Install Python Packages\e[0m"
-	    	echo -e "\e[32m2) Install Java Packages\e[0m"
-	    	echo -e "\e[36m3) Install PHP Packages\e[0m"
+        		echo -e "\e[34m1) Install Python Packages\e[0m"
+	    		echo -e "\e[32m2) Install Java Packages\e[0m"
+	    		echo -e "\e[36m3) Install PHP Packages\e[0m"
 			echo -e "\e[95m4) Install Node Js Packages\e[0m"
-	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
 			read selection1
 
@@ -154,11 +153,11 @@ do
 			echo " "
 
 			echo " "
-        	echo -e "\e[34m1) Install Vim Editor\e[0m"
-	    	echo -e "\e[32m2) Install NotePad++ Editor\e[0m"
-	    	echo -e "\e[36m3) Install VS Code Editor\e[0m"
+        		echo -e "\e[34m1) Install Vim Editor\e[0m"
+	    		echo -e "\e[32m2) Install NotePad++ Editor\e[0m"
+	    		echo -e "\e[36m3) Install VS Code Editor\e[0m"
 			echo -e "\e[95m4) Install CodeBlocks Editor\e[0m"
-	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
 			read selection2
 
@@ -186,7 +185,7 @@ do
 			break
 			done
 			;;
-                
+
 		3)  while true ; do
 			echo " "
 
@@ -196,11 +195,11 @@ do
 			echo " "
 
 			echo " "
-        	echo -e "\e[34m1) Install Google Chrome Browser\e[0m"
-	    	echo -e "\e[32m2) Install Mozila Firefox Browser\e[0m"
-	    	echo -e "\e[36m3) Install Brave Browser\e[0m"
+        		echo -e "\e[34m1) Install Google Chrome Browser\e[0m"
+	    		echo -e "\e[32m2) Install Mozila Firefox Browser\e[0m"
+	    		echo -e "\e[36m3) Install Brave Browser\e[0m"
 			echo -e "\e[95m4) Install Microsoft Edge Broswer\e[0m"
-	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
 			read selection3
 
@@ -230,7 +229,7 @@ do
 			break
 			done
 			;;
-		
+
 		4)  while true ; do
 			echo " "
 
@@ -240,11 +239,11 @@ do
 			echo " "
 
 			echo " "
-        	echo -e "\e[34m1) Install VLC Media Player\e[0m"
-	    	echo -e "\e[32m2) Install XBMC – Kodi Media Center\e[0m"
-	    	echo -e "\e[36m3) Install Miro Music and Video Player\e[0m"
+        		echo -e "\e[34m1) Install VLC Media Player\e[0m"
+	    		echo -e "\e[32m2) Install XBMC – Kodi Media Center\e[0m"
+	    		echo -e "\e[36m3) Install Miro Music and Video Player\e[0m"
 			echo -e "\e[95m4) Install SMPlayer\e[0m"
-	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
 			read selection3
 
@@ -286,7 +285,7 @@ do
                 echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
                 echo " "
 
-				echo " "
+		echo " "
                 ;;
 	esac
 done
