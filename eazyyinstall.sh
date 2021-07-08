@@ -1,37 +1,66 @@
 #!/bin/bash
 update(){
-	sudo apt-get update -y && apt-get upgrade -y
+	sudo apt update -y
 	}
+upgrade(){
+	sudo apt upgrade -y
+}
 
+snap(){
+	update
+	sudo apt install snapd
+}
 python(){
-
+	update
+	sudo apt install software-properties-common
+	sudo add-apt-repository ppa:deadsnakes/ppa
+	update
+	sudo apt install python3
 }
 
 java(){
-	sudo apt update -y
+	update
 	sudo apt-get install openjdk-11-jre openjdk-11-jdk -y
 	echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/" >> /etc/environment
 	source /etc/environment
 }
 
 php(){
-
+	sudo apt install php libapache2-mod-php
+	sudo systemctl restart apache2
 }
 
 nodejs(){
+	update
+	sudo apt install nodejs
+	sudo apt install npm
+}
 
+apache2(){
+	update
+	sudo apt-get install apache2
+}
+
+nginx(){
+	update
+	sudo apt-get install nginx
 }
 
 vim(){
+	update
+	upgrade
+	sudo apt-get install vim
 
 }
 
 notepad++(){
-
+	sudo snap install notepad-plus-plus
 }
 
 vscode(){
-
+	wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+	update
+	sudo apt install code
 }
 
 codeblocks(){
@@ -41,11 +70,15 @@ codeblocks(){
 }
 
 chrome(){
-
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo dpkg -i google-chrome-stable_current_amd64.deb
 }
 
 firefox(){
-
+	sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
+	sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
+	update
+	sudo apt install firefox
 }
 
 brave(){
@@ -57,7 +90,11 @@ brave(){
 }
 
 edge(){
-	
+	update
+	sudo apt install software-properties-common apt-transport-https wget
+	wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+	sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+	sudo apt install microsoft-edge-dev
 }
 
 vlc(){
@@ -111,7 +148,8 @@ do
 	echo -e "\e[32m2) Install Code & Text Editors\e[0m"
 	echo -e "\e[36m3) Install Web Browsers\e[0m"
 	echo -e "\e[95m4) Install Media Players\e[0m"
-	echo -e "\e[96m5) Exit the installer script\e[0m"
+	echo -e "\e[95m4) Install Web Servers\e[0m"
+	echo -e "\e[96m6) Exit the installer script\e[0m"
 	echo " "
 	read option
 
@@ -128,15 +166,19 @@ do
 
 			case "$selection1" in
 				p1)echo -e "\e[31mPython Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				python
 				;;
 
 				p2)echo -e "\e[31mJava Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				java
 				;;
 
 				p3)echo -e "\e[31mPHP Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				php
 				;;
 
 				p4)echo -e "\e[31mNode Js Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				nodejs
 				;;
 
 				p5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
@@ -165,15 +207,19 @@ do
 
 			case "$selection2" in
 				e1)echo -e "\e[31mVim Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				vim
 				;;
 
 				e2)echo -e "\e[31mNotePad++ Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				notepad++
 				;;
 
 				e3)echo -e "\e[31mVS Code Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				vscode
 				;;
 
 				e4)echo -e "\e[31mCodeBlocks Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				codeblocks
 				;;
 
 				e5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
@@ -200,15 +246,19 @@ do
 
 			case "$selection2" in
 				b1)echo -e "\e[31Google Chrome Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				chrome
 				;;
 
 				b2)echo -e "\e[31mMozila Firefox Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				firefox
 				;;
 
 				b3)echo -e "\e[31mBrave Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				brave
 				;;
 
 				b4)echo -e "\e[31mMicrosoft Edge Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				edge
 				;;
 
 				b5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
@@ -265,8 +315,42 @@ do
 			break
 			done
 			;;
+		5)  while true ; do
+			echo -e -e "\e[31mWeb Servers Installation selected.\e[0m"
+			echo -e -e "\e[31mPlease select the Web Server to be installed>>>>\e[0m"
+			echo " "
 
-		5)  echo -e "\e[31mExit option selected.\nExiting Eazyyinstall, Please wait...\e[0m"
+			echo " "
+			echo -e "\e[95m4) Install Apache Web Server\e[0m"
+			echo -e "\e[95m4) Install Nginx Web Server\e[0m"
+	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+			echo " "
+			read selection3
+
+			case "$selection2" in
+				b1)echo -e "\e[31Apache Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
+				apache2
+				;;
+
+				b2)echo -e "\e[31mNginx Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
+				nginx
+				;;
+
+				b3)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				exit 0
+				;;
+
+				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo " "
+
+				echo " "
+				;;
+			esac
+			break
+			done
+			;;
+
+		6)  echo -e "\e[31mExit option selected.\nExiting Eazyyinstall, Please wait...\e[0m"
                 exit 0
                 ;;
 		*)
