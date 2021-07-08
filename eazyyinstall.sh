@@ -3,6 +3,9 @@ update(){
 	sudo apt-get update -y && apt-get upgrade -y
 	}
 
+python(){
+
+}
 
 java(){
 	sudo apt update -y
@@ -11,9 +14,25 @@ java(){
 	source /etc/environment
 }
 
+php(){
 
+}
 
+nodejs(){
 
+}
+
+vim(){
+
+}
+
+notepad++(){
+
+}
+
+vscode(){
+
+}
 
 codeblocks(){
 	sudo add-apt-repository ppa:damien-moore/codeblocks-stable -y
@@ -21,7 +40,13 @@ codeblocks(){
 	sudo apt install codeblocks codeblocks-contrib -y
 }
 
+chrome(){
 
+}
+
+firefox(){
+
+}
 
 brave(){
 	sudo apt install apt-transport-https curl -y
@@ -31,6 +56,9 @@ brave(){
 	sudo apt install brave-browser
 }
 
+edge(){
+	
+}
 
 vlc(){
 	sudo apt install snap -y
