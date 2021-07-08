@@ -3,6 +3,10 @@ update(){
 	sudo apt-get update -y && apt-get upgrade -y
 	}
 
+python(){
+	sudo apt update -y
+	sudo apt-get install python
+}
 
 java(){
 	sudo apt update -y
@@ -11,9 +15,38 @@ java(){
 	source /etc/environment
 }
 
+<<<<<<< HEAD
+#php(){}
 
+#nodejs(){}
+=======
+php(){
+	sudo apt update -y
+	sudo apt install php libapache2-mod-php
+	sudo systemctl restart apache2
+	sudo apt install php-fpm
+	systemctl status php7.2-fpm
+}
+nodejs(){
+	sudo apt update -y
+	sudo apt install nodejs
+}
+>>>>>>> dev
 
+vim(){
+	sudo apt update -y
+	sudo snap install vscode --classic
+}
 
+notepad++(){
+	sudo apt update -y
+	sudo snap install notepad-plus-plus
+}
+
+vscode(){
+	sudo apt update -y
+	sudo snap install vscode --classic
+}
 
 codeblocks(){
 	sudo add-apt-repository ppa:damien-moore/codeblocks-stable -y
@@ -21,7 +54,16 @@ codeblocks(){
 	sudo apt install codeblocks codeblocks-contrib -y
 }
 
+chrome(){
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo apt install ./google-chrome-stable_current_amd64.deb
 
+}
+
+firefox(){
+	sudo apt update -y
+	sudo apt install firefox
+}
 
 brave(){
 	sudo apt install apt-transport-https curl -y
@@ -31,6 +73,10 @@ brave(){
 	sudo apt install brave-browser
 }
 
+edge(){
+	sudo apt update -y
+    sudo apt install software-properties-common apt-transport-https wget
+}
 
 vlc(){
 	sudo apt install snap -y
@@ -68,6 +114,10 @@ do
 		echo -e "\e[92m \e[1m ##       #########   ##        ##       ##     ##  ##  ####       ##    ##    ##########  ##       ##  "
 		echo -e "\e[92m \e[1m ##       ##     ##  ##         ##       ##     ##  ##   ### ##    ##    ##    ##      ##  ##       ##    "
 		echo -e "\e[92m \e[1m ######## ##     ## ########    ##       ##    #### ##    ##  ######     ##    ##      ##  ######## ########  "
+		
+                                                                             
+                                                                                  
+
 
 
 
@@ -94,7 +144,11 @@ do
 			echo " "
 
 			echo " "
+        		echo -e "\e[34m1) Install Python Packages\e[0m"
+	    		echo -e "\e[32m2) Install Java Packages\e[0m"
+	    		echo -e "\e[36m3) Install PHP Packages\e[0m"
 			echo -e "\e[95m4) Install Node Js Packages\e[0m"
+	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
 			read selection1
 
@@ -131,7 +185,11 @@ do
 			echo " "
 
 			echo " "
+        		echo -e "\e[34m1) Install Vim Editor\e[0m"
+	    		echo -e "\e[32m2) Install NotePad++ Editor\e[0m"
+	    		echo -e "\e[36m3) Install VS Code Editor\e[0m"
 			echo -e "\e[95m4) Install CodeBlocks Editor\e[0m"
+	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
 			read selection2
 
@@ -159,12 +217,16 @@ do
 			break
 			done
 			;;
+
 		3)  while true ; do
 			echo -e -e "\e[31mWeb Browser Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the browser to be installed>>>>\e[0m"
 			echo " "
 
 			echo " "
+        		echo -e "\e[34m1) Install Google Chrome Browser\e[0m"
+	    		echo -e "\e[32m2) Install Mozila Firefox Browser\e[0m"
+	    		echo -e "\e[36m3) Install Brave Browser\e[0m"
 			echo -e "\e[95m4) Install Microsoft Edge Broswer\e[0m"
 	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
@@ -196,12 +258,16 @@ do
 			break
 			done
 			;;
+
 		4)  while true ; do
 			echo -e -e "\e[31mMedia Players Installation selected.\e[0m"
 			echo -e -e "\e[31mPlease select the MEdia Player to be installed>>>>\e[0m"
 			echo " "
 
 			echo " "
+        		echo -e "\e[34m1) Install VLC Media Player\e[0m"
+	    		echo -e "\e[32m2) Install XBMC – Kodi Media Center\e[0m"
+	    		echo -e "\e[36m3) Install Miro Music and Video Player\e[0m"
 			echo -e "\e[95m4) Install SMPlayer\e[0m"
 	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
 			echo " "
@@ -245,6 +311,7 @@ do
                 echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
                 echo " "
 
+		echo " "
                 ;;
 	esac
 done
