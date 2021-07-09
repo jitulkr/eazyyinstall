@@ -12,9 +12,8 @@ snap(){
 }
 python(){
 	NAME="python3"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -47,9 +46,8 @@ python(){
 java(){
 	NAME1="openjdk-11-jdk"
 	NAME2="openjdk-11-jre"
-	dpkg -s $NAME1 $NAME2 &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME1 $NAME2 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -82,9 +80,8 @@ java(){
 
 php(){
 	NAME="php"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -115,9 +112,8 @@ php(){
 nodejs(){
 	NAME1="nodejs"
 	NAME2="npm"
-	dpkg -s $NAME1 $NAME2 &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME1 $NAME2 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -147,9 +143,8 @@ nodejs(){
 
 apache2(){
 	NAME="apache2"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -178,9 +173,8 @@ apache2(){
 
 nginx(){
 	NAME="nginx"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -209,9 +203,8 @@ nginx(){
 
 vim(){
 	NAME="vim"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -272,9 +265,8 @@ notepad++(){
 
 vscode(){
 	NAME="code"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -304,9 +296,8 @@ vscode(){
 
 codeblocks(){
 	NAME="codeblocks"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -336,9 +327,8 @@ codeblocks(){
 
 chrome(){
 	NAME="google-chrome-stable"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -367,9 +357,8 @@ chrome(){
 
 firefox(){
 	NAME="firefox"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -400,9 +389,8 @@ firefox(){
 
 brave(){
 	NAME="brave-browser"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -434,9 +422,8 @@ brave(){
 
 edge(){
 	NAME="microsoft-edge-dev"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -501,9 +488,8 @@ vlc(){
 
 xbmc(){
 	NAME="kodi"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -534,9 +520,8 @@ xbmc(){
 
 miro(){
 	NAME="miro"
-	dpkg -s $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -565,10 +550,9 @@ miro(){
 }
 
 smp(){
-NAME="smp"
-	dpkg -s $NAME &> /dev/null
+	NAME="smp"
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
