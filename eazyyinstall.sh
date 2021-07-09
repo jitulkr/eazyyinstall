@@ -148,7 +148,7 @@ do
 	echo -e "\e[32m2) Install Code & Text Editors\e[0m"
 	echo -e "\e[36m3) Install Web Browsers\e[0m"
 	echo -e "\e[95m4) Install Media Players\e[0m"
-	echo -e "\e[95m4) Install Web Servers\e[0m"
+	echo -e "\e[33m5) Install Web Servers\e[0m"
 	echo -e "\e[96m6) Exit the installer script\e[0m"
 	echo " "
 	read option
@@ -160,7 +160,11 @@ do
 			echo " "
 
 			echo " "
-			echo -e "\e[95m4) Install Node Js Packages\e[0m"
+			echo -e "\e[34m1) Install Python3 Packages\e[0m"
+			echo -e "\e[34m2) Install Java (Open JDK-JRE) Packages\e[0m"
+			echo -e "\e[34m3) Install PHP Packages\e[0m"
+			echo -e "\e[34m4) Install Node Js Packages\e[0m"
+			echo -e "\e[93m5) Return to Main Menu\e[0m"
 			echo " "
 			read selection1
 
@@ -169,7 +173,7 @@ do
 				python
 				;;
 
-				p2)echo -e "\e[31mJava Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				p2)echo -e "\e[31mJava (Open JDk-JRE) Package installation selected.\nPlease wait, processing your installation...\e[0m"
 				java
 				;;
 
@@ -201,7 +205,11 @@ do
 			echo " "
 
 			echo " "
-			echo -e "\e[95m4) Install CodeBlocks Editor\e[0m"
+			echo -e "\e[32m1) Install Vim Editor\e[0m"
+			echo -e "\e[32m2) Install NotePad++ Editor\e[0m"
+			echo -e "\e[32m3) Install VS Code Editor\e[0m"
+			echo -e "\e[32m4) Install CodeBlocks Editor\e[0m"
+			echo -e "\e[93m5) Return to Main Menu\e[0m"
 			echo " "
 			read selection2
 
@@ -239,12 +247,15 @@ do
 			echo " "
 
 			echo " "
-			echo -e "\e[95m4) Install Microsoft Edge Broswer\e[0m"
-	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
+			echo -e "\e[36m1) Install Google Chrome Broswer\e[0m"
+			echo -e "\e[36m2) Install Mozila Firefox Broswer\e[0m"
+			echo -e "\e[36m3) Install Brave Broswer\e[0m"
+			echo -e "\e[36m4) Install Microsoft Edge Broswer\e[0m"
+	    	echo -e "\e[93m5) Return to Main Menu\e[0m"
 			echo " "
 			read selection3
 
-			case "$selection2" in
+			case "$selection3" in
 				b1)echo -e "\e[31Google Chrome Browser installation selected.\nPlease wait, processing your installation...\e[0m"
 				chrome
 				;;
@@ -280,12 +291,15 @@ do
 			echo " "
 
 			echo " "
+			echo -e "\e[95m1) Install VLC Media Player\e[0m"
+			echo -e "\e[95m2) Install XBMC – Kodi Media Center\e[0m"
+	    	echo -e "\e[95m3) Install Miro Music and Video Player\e[0m"
 			echo -e "\e[95m4) Install SMPlayer\e[0m"
-	    		echo -e "\e[96m4) Return to Main Menu\e[0m"
+	    	echo -e "\e[93m5) Return to Main Menu\e[0m"
 			echo " "
-			read selection3
+			read selection4
 
-			case "$selection2" in
+			case "$selection4" in
 				b1)echo -e "\e[31VLC Media Player installation selected.\nPlease wait, processing your installation...\e[0m"
 				vlc
 				;;
@@ -321,13 +335,13 @@ do
 			echo " "
 
 			echo " "
-			echo -e "\e[95m4) Install Apache Web Server\e[0m"
-			echo -e "\e[95m4) Install Nginx Web Server\e[0m"
-	    	echo -e "\e[96m4) Return to Main Menu\e[0m"
+			echo -e "\e[33m1) Install Apache Web Server\e[0m"
+			echo -e "\e[33m2) Install Nginx Web Server\e[0m"
+	    	echo -e "\e[93m3) Return to Main Menu\e[0m"
 			echo " "
-			read selection3
+			read selection5
 
-			case "$selection2" in
+			case "$selection5" in
 				b1)echo -e "\e[31Apache Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
 				apache2
 				;;
@@ -350,7 +364,7 @@ do
 			done
 			;;
 
-		6)  echo -e "\e[31mExit option selected.\nExiting Eazyyinstall, Please wait...\e[0m"
+		6)  echo -e "\e[96mExit option selected.\nExiting Eazyyinstall, Please wait...\e[0m"
                 exit 0
                 ;;
 		*)
