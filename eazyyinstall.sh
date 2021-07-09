@@ -10,6 +10,9 @@ snap(){
 	update
 	sudo apt install snapd -y
 }
+install-fix(){
+	sudo apt --fix-broken install -y
+}
 python(){
 	NAME="python3"
 
@@ -101,7 +104,7 @@ php(){
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
-			sudo apt install php libapache2-mod-php
+			sudo apt install php libapache2-mod-php -y
 			#sudo systemctl restart apache2
 
 			else
@@ -139,8 +142,8 @@ nodejs(){
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 			update
-			sudo apt install nodejs
-			sudo apt install npm
+			sudo apt install nodejs -y
+			sudo apt install npm -y
 
 			else
             	echo -e "\e[32m Already installed"
@@ -187,6 +190,7 @@ apache2(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Apache2 selected."
+
 					sudo apt-get install --only-upgrade apache2
 				else
 					echo
@@ -286,7 +290,7 @@ notepad++(){
 			echo " "
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
-
+			snap
 			sudo snap install notepad-plus-plus
 
 			else
@@ -474,7 +478,7 @@ brave(){
 			sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 			echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 			sudo apt update -y
-			sudo apt install brave-browser
+			sudo apt install brave-browser -y
 
 			else
             	echo -e "\e[32m Already installed"
@@ -615,8 +619,8 @@ xbmc(){
 		fi
 }
 
-miro(){
-	NAME="miro"
+mplayer(){
+	NAME="mplayer"
 
 		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
@@ -625,9 +629,9 @@ miro(){
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
-			sudo add-apt-repository ppa:pcf/miro-releases -y
-			sudo apt-get update -y
-			sudo apt-get install miro -y
+			sudo add-apt-repository universe
+			update
+			sudo apt install mplayer mplayer-gui -y
 
 			else
             	echo -e "\e[32m Already installed"
@@ -636,8 +640,8 @@ miro(){
 				if [ "$RESP" = "y" ]; then
 					echo
 					echo
-  					echo -e "\e[92mUpgrade Miro Media Player selected."
-					sudo apt-get install --only-upgrade miro
+  					echo -e "\e[92mUpgrade Mplayer Media Player selected."
+					sudo apt-get install --only-upgrade mplayer-gui
 				else
 					echo
 					echo
@@ -868,7 +872,7 @@ do
 			read selection3
 
 			case "$selection3" in
-				1)echo -e "\e[96Google Chrome Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96mGoogle Chrome Browser installation selected.\nPlease wait, processing your installation...\e[0m"
 				echo
 				echo
 				chrome
@@ -922,14 +926,14 @@ do
 			echo " "
 			echo -e "\e[95m1) Install VLC Media Player\e[0m"
 			echo -e "\e[95m2) Install XBMC – Kodi Media Center\e[0m"
-	    	echo -e "\e[95m3) Install Miro Music and Video Player\e[0m"
+	    	echo -e "\e[95m3) Install Mplayer Video Player\e[0m"
 			echo -e "\e[95m4) Install SMPlayer\e[0m"
 	    	echo -e "\e[93m5) Return to Main Menu\e[0m"
 			echo " "
 			read selection4
 
 			case "$selection4" in
-				1)echo -e "\e[96mVLC Media Player installation selected.\n\e[5mPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96mVLC Media Player installation selected.\nPlease wait, processing your installation...\e[0m"
 				echo
 				echo
 				vlc
@@ -941,10 +945,10 @@ do
 				xbmc
 				;;
 
-				3)echo -e "\e[96mMiro Music and Video Player installation selected.\nPlease wait, processing your installation...\e[0m"
+				3)echo -e "\e[96mMplayer Video Player installation selected.\nPlease wait, processing your installation...\e[0m"
 				echo
 				echo
-				miro
+				mplayer
 				;;
 
 				4)echo -e "\e[96mSMPlayer installation selected.\nPlease wait, processing your installation...\e[0m"
@@ -988,7 +992,7 @@ do
 			read selection5
 
 			case "$selection5" in
-				1)echo -e "\e[96Apache Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96mApache Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
 				echo
 				echo
 				apache2
