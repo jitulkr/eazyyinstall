@@ -46,7 +46,10 @@ git:
  sudo apt upgrade -y
  ```
  
-6) Next, download and extract this script as shown below.
+6) Now after the system finishes Upgrade Process, resatrt it.
+![EazyyInstall Demo](demo/restart.gif)
+
+7) Next, download and extract this script as shown below.
 ![EazyyInstall Demo](demo/git-download.gif)
                 **OR**
 Type the command below inside terminal to do that automatically.
@@ -56,18 +59,18 @@ git clone https://github.com/jitulkr/eazyyinstall.git
 The EazyyInstall script is now downloaded to the *Downloads* folder. Close the terminal.
 
 
-6) Go inside the **eazyyinstall** directory and open a new terminal here.
+8) Go inside the **eazyyinstall** directory and open a new terminal here.
 ![EazyyInstall Demo](demo/directory-cd.gif)
-6) Type the following command in terminal to add Execution permission:
+9) Type the following command in terminal to add Execution permission:
 ```
 sudo chmod +x eazyyinstall.sh
 ```
-5) Enter your Ubuntu user *password* when requested.
-6) To Run the **EazyyInstall** script, type the following command in terminal:
+10) Enter your Ubuntu user *password* when requested.
+11) To Run the **EazyyInstall** script, type the following command in terminal:
 ```
 sudo ./eazyyinstall.sh
 ```
-7) Now select the appropriate options as per your requirements.
+12) Now select the appropriate options as per your requirements.
 
 ## That's All.
 ### Enjoy Automated Software Installation.
