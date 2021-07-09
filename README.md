@@ -36,7 +36,17 @@ git:
  sudo apt-get install git -y
  ```
 
-4) Next, download and extract this script as shown below.
+4) If the system you are using is new (or you are using it after a while) Please update the list of available packages by typing the following command in terminal and hit enter :
+ ```
+ sudo apt update -y
+ ```
+ 
+5) Now Install newer versions of the packages that are already installed by typing the following command in terminal and hit enter :
+ ```
+ sudo apt upgrade -y
+ ```
+ 
+6) Next, download and extract this script as shown below.
 ![EazyyInstall Demo](demo/git-download.gif)
                 **OR**
 Type the command below inside terminal to do that automatically.
@@ -46,7 +56,7 @@ git clone https://github.com/jitulkr/eazyyinstall.git
 The EazyyInstall script is now downloaded to the *Downloads* folder. Close the terminal.
 
 
-5) Go inside the **eazyyinstall** directory and open a new terminal here.
+6) Go inside the **eazyyinstall** directory and open a new terminal here.
 ![EazyyInstall Demo](demo/directory-cd.gif)
 6) Type the following command in terminal to add Execution permission:
 ```
