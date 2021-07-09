@@ -242,7 +242,7 @@ vim(){
 
 notepad++(){
 	NAME="notepad-plus-plus"
-	dpkg -s $NAME &> /dev/null
+	snap info $NAME &> /dev/null
 
 		if [ $? -ne 0 ]
 
@@ -469,7 +469,7 @@ edge(){
 
 vlc(){
 	NAME="vlc"
-	dpkg -s $NAME &> /dev/null
+	snap info $NAME &> /dev/null
 
 		if [ $? -ne 0 ]
 
@@ -480,7 +480,7 @@ vlc(){
 
 			#sudo apt install snap -
 			snap
-			sudo snap install vlc -y
+			sudo snap install vlc
 
 			else
             	echo -e "\e[32m Already installed"
@@ -488,7 +488,7 @@ vlc(){
 
 				if [ "$RESP" = "y" ]; then
   					echo -e "\e[32mUpgrade VLC Media Player selected."
-					sudo apt-get install --only-upgrade vlc
+					sudo snap refresh vlc
 				else
   					echo -e "\e[31mDo not Upgrade selected"
 					echo -e "\e[31mExiting to Main Menu....."
@@ -781,7 +781,7 @@ do
 			read selection4
 
 			case "$selection4" in
-				1)echo -e "\e[31VLC Media Player installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[31mVLC Media Player installation selected.\nPlease wait, processing your installation...\e[0m"
 				vlc
 				;;
 
