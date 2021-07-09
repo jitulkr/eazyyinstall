@@ -254,7 +254,7 @@ vim(){
 
 			update
 			upgrade
-			sudo apt-get install vim
+			sudo apt-get install vim -y
 
 			else
             	echo -e "\e[32m Already installed"
@@ -284,7 +284,7 @@ notepad++(){
 	NAME="notepad-plus-plus"
 	snap info $NAME &> /dev/null
 
-		if [ $? -ne 0 ]
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -326,9 +326,11 @@ vscode(){
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
-			wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+			sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list' 
+			wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+			sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 			update
-			sudo apt install code
+			sudo snap install code
 
 			else
             	echo -e "\e[32m Already installed"
@@ -545,7 +547,7 @@ edge(){
 
 vlc(){
 	NAME="vlc"
-	snap info $NAME &> /dev/null
+	if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 		if [ $? -ne 0 ]
 
@@ -554,7 +556,7 @@ vlc(){
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
-			#sudo apt install snap -
+			
 			snap
 			sudo snap install vlc
 
