@@ -36,7 +36,7 @@ git:
  sudo apt-get install git -y
  ```
 
-4) If the system you are using is new (or you are using it after a while) Please update the list of available packages by typing the following command in terminal and hit enter :
+4) If the system you are using is new (or you are using it after a while) Please update the list of available packages and their versions by typing the following command in terminal and hit enter :
  ```
  sudo apt update -y
  ```
