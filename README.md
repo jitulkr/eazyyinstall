@@ -51,12 +51,14 @@ git:
 
 7) Next, download and extract this script as shown below.
 ![EazyyInstall Demo](demo/git-download.gif)
+The EazyyInstall script is now downloaded to the *Downloads* folder/directory. Close the terminal.
                 **OR**
 Type the command below inside terminal to do that automatically.
 ```
 git clone https://github.com/jitulkr/eazyyinstall.git
 ```
-The EazyyInstall script is now downloaded to the *Downloads* folder. Close the terminal.
+![EazyyInstall Demo](demo/git-clone.gif)
+If you used the *git clone* method to download, the EazyyInstall script will be downloaded to the *Home* folder/directory.
 
 
 8) Go inside the **eazyyinstall** directory and open a new terminal here.
