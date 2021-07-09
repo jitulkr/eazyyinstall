@@ -31,14 +31,21 @@ python(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Python selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Python selected."
 					sudo apt-get install --only-upgrade python3
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 
-					echo " "
 				fi
 		fi
 }
@@ -63,15 +70,21 @@ java(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Java selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Java selected."
 					sudo apt-get install --only-upgrade openjdk-11-jdk
 					sudo apt-get install --only-upgrade openjdk-11-jre
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 
@@ -96,14 +109,20 @@ php(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Php selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Php selected."
 					sudo apt-get install --only-upgrade php
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 
@@ -128,15 +147,21 @@ nodejs(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Nodejs selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Nodejs selected."
 					sudo apt-get install --only-upgrade nodejs
 					sudo apt-get install --only-upgrade npm
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -159,14 +184,20 @@ apache2(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Apache2 selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Apache2 selected."
 					sudo apt-get install --only-upgrade apache2
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -189,14 +220,20 @@ nginx(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Nginx selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Nginx selected."
 					sudo apt-get install --only-upgrade nginx
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -220,14 +257,20 @@ vim(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Vim selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Vim selected."
 					sudo apt-get install --only-upgrade vim
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 
@@ -251,14 +294,20 @@ notepad++(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Notepad++ selected."
-					sudo apt-get install --only-upgrade notepad-plus-plus
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Notepad++ selected."
+					sudo snap refresh notepad-plus-plus
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -282,14 +331,20 @@ vscode(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade VScode selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade VScode selected."
 					sudo apt-get install --only-upgrade code
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -313,14 +368,20 @@ codeblocks(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Codeblocks selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Codeblocks selected."
 					sudo apt-get install --only-upgrade codeblocks
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -343,14 +404,20 @@ chrome(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Google Chrome selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Google Chrome selected."
 					sudo apt-get install --only-upgrade google-chrome-stable
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -375,14 +442,20 @@ firefox(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Mozila Firefox selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Mozila Firefox selected."
 					sudo apt-get install --only-upgrade firefox
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -408,14 +481,20 @@ brave(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Brave Browser selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Brave Browser selected."
 					sudo apt-get install --only-upgrade brave-browser
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -441,14 +520,20 @@ edge(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Microsoft Edge selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Microsoft Edge selected."
 					sudo apt-get install --only-upgrade microsoft-edge-dev
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 
@@ -474,14 +559,20 @@ vlc(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade VLC Media Player selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade VLC Media Player selected."
 					sudo snap refresh vlc
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -506,14 +597,20 @@ xbmc(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade XBMC-kodi Media Player selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade XBMC-kodi Media Player selected."
 					sudo apt-get install --only-upgrade kodi
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -537,14 +634,20 @@ miro(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade Miro Media Player selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade Miro Media Player selected."
 					sudo apt-get install --only-upgrade miro
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -568,14 +671,20 @@ smp(){
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
 
 				if [ "$RESP" = "y" ]; then
-  					echo -e "\e[32mUpgrade SMP Media Player selected."
+					echo
+					echo
+  					echo -e "\e[92mUpgrade SMP Media Player selected."
 					sudo apt-get install --only-upgrade smplayer
 				else
-  					echo -e "\e[31mDo not Upgrade selected"
+					echo
+					echo
+  					echo -e "\e[31m\e[1mDo not Upgrade selected\e[0m"
 					echo -e "\e[31mExiting to Main Menu....."
-					echo " "
-
-					echo " "
+					read -r -p "Continuing in 5 seconds" -t 5 -s
+					echo
+					echo
+					echo
+					echo
 				fi
 		fi
 }
@@ -584,7 +693,12 @@ smp(){
 
 while  true
 do
-		clear
+		echo
+		echo
+		echo
+		echo
+		echo
+		echo
 		echo -e "\e[92m \e[1m ########    ###    ######## ##    ## ##    ## #### ##    ##  ######  ########     ##      ##       ##  "
 		echo -e "\e[92m \e[1m ##         ## ##        ##   ##  ##   ##  ##   ##  ###   ## ##    ##    ##       ####     ##       ##  "
 		echo -e "\e[92m \e[1m ##        ##   ##      ##     ####     ####    ##  ####  ## ##          ##      ##  ##    ##       ##  "
@@ -629,29 +743,47 @@ do
 			read selection1
 
 			case "$selection1" in
-				1)echo -e "\e[31mPython Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96mPython Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				python
 				;;
 
-				2)echo -e "\e[31mJava (Open JDk-JRE) Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				2)echo -e "\e[96mJava (Open JDk-JRE) Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				java
 				;;
 
-				3)echo -e "\e[31mPHP Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				3)echo -e "\e[96mPHP Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				php
 				;;
 
-				4)echo -e "\e[31mNode Js Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				4)echo -e "\e[96mNode Js Package installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				nodejs
 				;;
 
-				5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				5)clear
+				echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				echo
+				echo
+				echo
+				echo
 				break
 				exit 0
+				
 				;;
 
-				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
-				echo " "
+				*)clear
+				echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo
+				echo
+				echo
+				echo
 
                 ;;
 			esac
@@ -662,7 +794,7 @@ do
 		2)	while true ; do
 			clear
 			echo -e -e "\e[36mCode & Text Editor Installation selected.\e[0m"
-			echo -e -e "\e[31mPlease select the editor to be installed>>>>\e[0m"
+			echo -e -e "\e[33mPlease select the editor to be installed>>>>\e[0m"
 			echo " "
 
 			echo " "
@@ -675,29 +807,46 @@ do
 			read selection2
 
 			case "$selection2" in
-				1)echo -e "\e[31mVim Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96mVim Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				vim
 				;;
 
-				2)echo -e "\e[31mNotePad++ Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				2)echo -e "\e[96mNotePad++ Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				notepad++
 				;;
 
-				3)echo -e "\e[31mVS Code Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				3)echo -e "\e[96mVS Code Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				vscode
 				;;
 
-				4)echo -e "\e[31mCodeBlocks Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				4)echo -e "\e[96mCodeBlocks Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				codeblocks
 				;;
 
-				5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				5)clear
+				echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				echo
+				echo
+				echo
+				echo
 				break
 				exit 0
 				;;
 
-				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
-				echo " "
+				*)clear
+				echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo
+				echo
+				echo
+				ec96
 				;;
 			esac
 			break
@@ -705,8 +854,8 @@ do
 			;;
 		3)  while true ; do
 			clear
-			echo -e -e "\e[31mWeb Browser Installation selected.\e[0m"
-			echo -e -e "\e[31mPlease select the browser to be installed>>>>\e[0m"
+			echo -e -e "\e[36mWeb Browser Installation selected.\e[0m"
+			echo -e -e "\e[33mPlease select the browser to be installed>>>>\e[0m"
 			echo " "
 
 			echo " "
@@ -719,31 +868,46 @@ do
 			read selection3
 
 			case "$selection3" in
-				1)echo -e "\e[31Google Chrome Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96Google Chrome Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				chrome
 				;;
 
-				2)echo -e "\e[31mMozila Firefox Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				2)echo -e "\e[96mMozila Firefox Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				firefox
 				;;
 
-				3)echo -e "\e[31mBrave Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				3)echo -e "\e[96mBrave Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				brave
 				;;
 
-				4)echo -e "\e[31mMicrosoft Edge Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				4)echo -e "\e[96mMicrosoft Edge Browser installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				edge
 				;;
 
-				5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				5)clear
+				echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				echo
+				echo
+				echo
+				echo
 				break
 				exit 0
 				;;
 
-				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
-				echo " "
-
-				echo " "
+				*)clear
+				echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo
+				echo
+				echo
+				echo
 				;;
 			esac
 			break
@@ -751,8 +915,8 @@ do
 			;;
 		4)  while true ; do
 			clear
-			echo -e -e "\e[31mMedia Players Installation selected.\e[0m"
-			echo -e -e "\e[31mPlease select the MEdia Player to be installed>>>>\e[0m"
+			echo -e -e "\e[36mMedia Players Installation selected.\e[0m"
+			echo -e -e "\e[33mPlease select the MEdia Player to be installed>>>>\e[0m"
 			echo " "
 
 			echo " "
@@ -765,31 +929,46 @@ do
 			read selection4
 
 			case "$selection4" in
-				1)echo -e "\e[31mVLC Media Player installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96mVLC Media Player installation selected.\n\e[5mPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				vlc
 				;;
 
-				2)echo -e "\e[31mXBMC – Kodi Media Center installation selected.\nPlease wait, processing your installation...\e[0m"
+				2)echo -e "\e[96mXBMC – Kodi Media Center installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				xbmc
 				;;
 
-				3)echo -e "\e[31mMiro Music and Video Player installation selected.\nPlease wait, processing your installation...\e[0m"
+				3)echo -e "\e[96mMiro Music and Video Player installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				miro
 				;;
 
-				4)echo -e "\e[31mSMPlayer installation selected.\nPlease wait, processing your installation...\e[0m"
+				4)echo -e "\e[96mSMPlayer installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				smp
 				;;
 
-				5)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				5)clear
+				echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				echo
+				echo
+				echo
+				echo
 				break
 				exit 0
 				;;
 
-				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
-				echo " "
-
-				echo " "
+				*)clear
+				echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo
+				echo
+				echo
+				echo
 				;;
 			esac
 			break
@@ -797,8 +976,8 @@ do
 			;;
 		5)  while true ; do
 			clear
-			echo -e -e "\e[31mWeb Servers Installation selected.\e[0m"
-			echo -e -e "\e[31mPlease select the Web Server to be installed>>>>\e[0m"
+			echo -e -e "\e[36mWeb Servers Installation selected.\e[0m"
+			echo -e -e "\e[33mPlease select the Web Server to be installed>>>>\e[0m"
 			echo " "
 
 			echo " "
@@ -809,22 +988,34 @@ do
 			read selection5
 
 			case "$selection5" in
-				1)echo -e "\e[31Apache Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
+				1)echo -e "\e[96Apache Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				apache2
 				;;
 
-				2)echo -e "\e[31mNginx Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
+				2)echo -e "\e[96mNginx Web Server installation selected.\nPlease wait, processing your installation...\e[0m"
+				echo
+				echo
 				nginx
 				;;
 
-				3)echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				3)clear
+				echo -e "\e[31mReturn to Main Menu  selected.\nPlease wait, processing your request...\e[0m"
+				echo
+				echo
+				echo
+				echo
 				break
+				exit 0
 				;;
 
-				*)echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
-				echo " "
-
-				echo " "
+				*)clear
+				echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
+				echo
+				echo
+				echo
+				echo
 				;;
 			esac
 			break
@@ -832,13 +1023,21 @@ do
 			;;
 
 		6)  clear
-			echo -e "\e[96mExit option selected.\nExiting Eazyyinstall, Please wait...\e[0m"
+			echo -e "\e[96mExit option selected."
+			read -r -p "Exiting Eazyyinstall, Please wait..." -t 5 -n 1 -s
+				echo
+				echo
+				echo
+				echo
                 exit 0
                 ;;
 
-		*)
+		*)		clear
                 echo -e "\e[31m\e[5m \e[1mInvalid selection, please try again.\e[0m"
-                echo " "
+                echo
+				echo
+				echo
+				echo
 
                 ;;
 	esac
