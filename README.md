@@ -46,7 +46,7 @@ git:
  sudo apt upgrade -y
  ```
  
-6) Now after the system finishes Upgrade Process, resatrt it.
+6) Now after the system finishes Upgrade Process, resatrt.
 ![EazyyInstall Demo](demo/restart.gif)
 
 7) Next, download and extract this script as shown below.
