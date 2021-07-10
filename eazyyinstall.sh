@@ -546,10 +546,9 @@ edge(){
 }
 
 vlc(){
+
 	NAME="vlc"
 	if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
-
-		if [ $? -ne 0 ]
 
 			then
 			echo " "
@@ -718,6 +717,7 @@ do
 	echo " "
 	echo -e  "\e[38;5;32m#Author: Jitul Kumar Laphong & Luknu Lomri#\e[0m"
 	echo -e  "\e[95m#Automated Software Installation Script for Ubuntu Operating System#\e[0m"
+	echo -e  "\e[95m#\e[1mVersion 1.01\e[0m#\e[0m"
 	echo " "
 
 	echo " "
