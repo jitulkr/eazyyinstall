@@ -555,9 +555,8 @@ vlc(){
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
-			
-			snap
-			sudo snap install vlc
+			update
+			sudo apt install vlc
 
 			else
             	echo -e "\e[32m Already installed"
@@ -567,7 +566,7 @@ vlc(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade VLC Media Player selected."
-					sudo snap refresh vlc
+					sudo apt-get install --only-upgrade vlc
 				else
 					echo
 					echo
