@@ -282,9 +282,8 @@ vim(){
 
 notepad++(){
 	NAME="notepad-plus-plus"
-	snap info $NAME &> /dev/null
 
-		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
+		if [ $(snap info $NAME 2>/dev/null | grep -c "installed") -eq 0 ];
 
 			then
 			echo " "
@@ -319,7 +318,7 @@ notepad++(){
 vscode(){
 	NAME="code"
 
-		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
+		if [ $(snap info $NAME 2>/dev/null | grep -c "installed") -eq 0 ];
 
 			then
 			echo " "
@@ -340,7 +339,7 @@ vscode(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade VScode selected."
-					sudo apt-get install --only-upgrade code
+					sudo snap refresh code
 				else
 					echo
 					echo
@@ -548,7 +547,7 @@ edge(){
 vlc(){
 
 	NAME="vlc"
-	if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	if [ $(snap info $NAME 2>/dev/null | grep -c "installed") -eq 0 ];
 
 			then
 			echo " "
@@ -556,7 +555,7 @@ vlc(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo apt install vlc
+			sudo snap install vlc
 
 			else
             	echo -e "\e[32m Already installed"
@@ -566,7 +565,7 @@ vlc(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade VLC Media Player selected."
-					sudo apt-get install --only-upgrade vlc
+					sudo snap refresh vlc
 				else
 					echo
 					echo
