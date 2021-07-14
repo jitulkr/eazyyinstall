@@ -6,10 +6,10 @@ upgrade(){
 	sudo apt upgrade -y
 }
 
-snap(){
-	update
-	sudo apt install snapd -y
-}
+#snap(){
+	#update
+	#sudo apt install snapd -y
+#}
 install-fix(){
 	sudo apt --fix-broken install -y
 }
@@ -280,17 +280,21 @@ vim(){
 
 }
 
-notepad++(){
-	NAME="notepad-plus-plus"
+sublime-text(){
+	NAME="sublime-text"
 
-		if [ $(snap info $NAME 2>/dev/null | grep -c "installed") -eq 0 ];
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
-			snap
-			sudo snap install notepad-plus-plus
+
+			update
+			sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
+			curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+			sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+			sudo apt install sublime-text
 
 			else
             	echo -e "\e[32m Already installed"
@@ -299,8 +303,8 @@ notepad++(){
 				if [ "$RESP" = "y" ]; then
 					echo
 					echo
-  					echo -e "\e[92mUpgrade Notepad++ selected."
-					sudo snap refresh notepad-plus-plus
+  					echo -e "\e[92mUpgrade sublime-text selected."
+					sudo apt-get install --only-upgrade sublime-text
 				else
 					echo
 					echo
@@ -318,7 +322,7 @@ notepad++(){
 vscode(){
 	NAME="code"
 
-		if [ $(snap info $NAME 2>/dev/null | grep -c "installed") -eq 0 ];
+		if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -329,7 +333,7 @@ vscode(){
 			wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 			sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 			update
-			sudo snap install code --classic
+			sudo apt install code --classic
 
 			else
             	echo -e "\e[32m Already installed"
@@ -339,7 +343,7 @@ vscode(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade VScode selected."
-					sudo snap refresh code
+					sudo apt-get install --only-upgrade code
 				else
 					echo
 					echo
@@ -547,7 +551,7 @@ edge(){
 vlc(){
 
 	NAME="vlc"
-	if [ $(snap info $NAME 2>/dev/null | grep -c "installed") -eq 0 ];
+	if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
 
 			then
 			echo " "
@@ -555,7 +559,7 @@ vlc(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo snap install vlc
+			sudo apt install vlc
 
 			else
             	echo -e "\e[32m Already installed"
@@ -565,7 +569,7 @@ vlc(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade VLC Media Player selected."
-					sudo snap refresh vlc
+					sudo apt-get install --only-upgrade vlc
 				else
 					echo
 					echo
@@ -803,7 +807,7 @@ do
 
 			echo " "
 			echo -e "\e[32m1) Install Vim Editor\e[0m"
-			echo -e "\e[32m2) Install NotePad++ Editor\e[0m"
+			echo -e "\e[32m2) Install Sublime-text Editor\e[0m"
 			echo -e "\e[32m3) Install VS Code Editor\e[0m"
 			echo -e "\e[32m4) Install CodeBlocks Editor\e[0m"
 			echo -e "\e[93m5) Return to Main Menu\e[0m"
@@ -817,10 +821,10 @@ do
 				vim
 				;;
 
-				2)echo -e "\e[96mNotePad++ Editor installation selected.\nPlease wait, processing your installation...\e[0m"
+				2)echo -e "\e[96mSublime-text Editor installation selected.\nPlease wait, processing your installation...\e[0m"
 				echo
 				echo
-				notepad++
+				Sublime-text
 				;;
 
 				3)echo -e "\e[96mVS Code Editor installation selected.\nPlease wait, processing your installation...\e[0m"
