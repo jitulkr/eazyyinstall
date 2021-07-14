@@ -303,7 +303,7 @@ sublime-text(){
 				if [ "$RESP" = "y" ]; then
 					echo
 					echo
-  					echo -e "\e[92mUpgrade sublime-text selected."
+  					echo -e "\e[92mUpgrade Sublime-text selected."
 					sudo apt-get install --only-upgrade sublime-text
 				else
 					echo
@@ -824,7 +824,7 @@ do
 				2)echo -e "\e[96mSublime-text Editor installation selected.\nPlease wait, processing your installation...\e[0m"
 				echo
 				echo
-				Sublime-text
+				sublime-text
 				;;
 
 				3)echo -e "\e[96mVS Code Editor installation selected.\nPlease wait, processing your installation...\e[0m"
