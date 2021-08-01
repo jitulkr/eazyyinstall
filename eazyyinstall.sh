@@ -300,6 +300,7 @@ sublime-text(){
 					echo -e "\e[32m Installation successful"
 				else
 					echo -e "\e[31m\e[1mInstallation failed. Please Retry\e[0m"
+				fi
 
 			else
             	echo -e "\e[32m Already installed"
