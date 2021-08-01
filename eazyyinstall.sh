@@ -296,6 +296,10 @@ sublime-text(){
 			curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 			sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
 			sudo apt install sublime-text
+				if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
+					echo -e "\e[32m Installation successful"
+				else
+					echo -e "\e[31m\e[1mInstallation failed. Please Retry\e[0m"
 
 			else
             	echo -e "\e[32m Already installed"
