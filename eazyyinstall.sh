@@ -27,7 +27,6 @@ python(){
 			sudo apt install software-properties-common
 			sudo add-apt-repository ppa:deadsnakes/ppa
 			update
-			sudo apt install python3
 
         	else
             	echo -e "\e[32m Already installed"
@@ -180,7 +179,6 @@ apache2(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo apt-get install apache2
 
 			else
             	echo -e "\e[32m Already installed"
@@ -217,7 +215,6 @@ nginx(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo apt-get install nginx
 
 			else
             	echo -e "\e[32m Already installed"
@@ -295,13 +292,8 @@ sublime-text(){
 			sudo snap install curl
 			curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 			sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
-			sudo apt install sublime-text
-				#if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
-					#echo -e "\e[32m Installation successful"
-				#else
-					#echo -e "\e[31m\e[1mInstallation failed. Please Retry\e[0m"
-				#fi
 
+				
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -339,7 +331,6 @@ vscode(){
 			wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 			sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 			update
-			sudo apt install code --classic
 
 			else
             	echo -e "\e[32m Already installed"
@@ -450,7 +441,6 @@ firefox(){
 			sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
 			sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
 			update
-			sudo apt install firefox
 
 			else
             	echo -e "\e[32m Already installed"
@@ -528,7 +518,6 @@ edge(){
 			sudo apt install software-properties-common apt-transport-https wget
 			wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 			sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
-			sudo apt install microsoft-edge-dev
 			
 			else
             	echo -e "\e[32m Already installed"
@@ -565,7 +554,6 @@ vlc(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo apt install vlc
 
 			else
             	echo -e "\e[32m Already installed"
@@ -789,7 +777,6 @@ do
 				echo
 				break
 				exit 0
-				
 				;;
 
 				*)clear
@@ -798,7 +785,6 @@ do
 				echo
 				echo
 				echo
-
                 ;;
 			esac
 			break
