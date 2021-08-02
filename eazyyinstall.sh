@@ -27,7 +27,8 @@ python(){
 			sudo apt install software-properties-common
 			sudo add-apt-repository ppa:deadsnakes/ppa
 			update
-			sudo apt install python3
+			sudo apt install python3 -y
+
 
         	else
             	echo -e "\e[32m Already installed"
@@ -68,6 +69,7 @@ java(){
 			echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/" >> /etc/environment
 			source /etc/environment
 
+
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -105,6 +107,7 @@ php(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			sudo apt install php libapache2-mod-php -y
+
 			#sudo systemctl restart apache2
 
 			else
@@ -145,6 +148,7 @@ nodejs(){
 			sudo apt install nodejs -y
 			sudo apt install npm -y
 
+
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -180,7 +184,8 @@ apache2(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo apt-get install apache2
+			sudo apt-get install apache2 -y
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -217,7 +222,8 @@ nginx(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo apt-get install nginx
+			sudo apt-get install nginx -y
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -255,6 +261,7 @@ vim(){
 			update
 			upgrade
 			sudo apt-get install vim -y
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -295,13 +302,9 @@ sublime-text(){
 			sudo snap install curl
 			curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 			sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
-			sudo apt install sublime-text
-				if [ $(dpkg-query -W -f='${Status}' $NAME 2>/dev/null | grep -c "ok installed") -eq 0 ];
-					echo -e "\e[32m Installation successful"
-				else
-					echo -e "\e[31m\e[1mInstallation failed. Please Retry\e[0m"
-				fi
+			sudo apt install sublime-text -y
 
+				
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -339,7 +342,8 @@ vscode(){
 			wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 			sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
 			update
-			sudo apt install code --classic
+			sudo apt install code -y
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -378,6 +382,7 @@ codeblocks(){
 			sudo apt update -y
 			sudo apt install codeblocks codeblocks-contrib -y
 
+
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -413,6 +418,7 @@ chrome(){
 
 			wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 			sudo dpkg -i google-chrome-stable_current_amd64.deb
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -450,7 +456,8 @@ firefox(){
 			sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
 			sudo apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu bionic main"
 			update
-			sudo apt install firefox
+			sudo apt install firefox -y
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -491,6 +498,7 @@ brave(){
 			sudo apt update -y
 			sudo apt install brave-browser -y
 
+
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -528,7 +536,8 @@ edge(){
 			sudo apt install software-properties-common apt-transport-https wget
 			wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 			sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
-			sudo apt install microsoft-edge-dev
+			sudo apt install microsoft-edge-dev -y
+
 			
 			else
             	echo -e "\e[32m Already installed"
@@ -565,7 +574,8 @@ vlc(){
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
 			update
-			sudo apt install vlc
+			sudo apt install vlc -y
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -605,6 +615,7 @@ xbmc(){
 			sudo apt-get update -y
 			sudo apt-get install kodi -y
 
+
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -642,6 +653,7 @@ mplayer(){
 			update
 			sudo apt install mplayer mplayer-gui -y
 
+
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -678,6 +690,7 @@ smp(){
 			sudo add-apt-repository ppa:rvm/smplayer -y
 			sudo apt-get update -y
 			sudo apt-get install smplayer smplayer-themes smplayer-skins -y
+
 
 			else
             	echo -e "\e[32m Already installed"
@@ -789,7 +802,7 @@ do
 				echo
 				break
 				exit 0
-				
+
 				;;
 
 				*)clear
@@ -798,12 +811,13 @@ do
 				echo
 				echo
 				echo
-
+				sw_packs
                 ;;
 			esac
 			break
 			done
 			;;
+
 
 		2)	while true ; do
 			clear
@@ -1056,3 +1070,4 @@ do
                 ;;
 	esac
 done
+}
