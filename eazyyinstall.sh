@@ -38,7 +38,7 @@ python(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Python selected."
-					sudo apt-get install --only-upgrade python3
+					sudo apt-get install --only-upgrade python3 -y
 				else
 					echo
 					echo
@@ -77,8 +77,8 @@ java(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Java selected."
-					sudo apt-get install --only-upgrade openjdk-11-jdk
-					sudo apt-get install --only-upgrade openjdk-11-jre
+					sudo apt-get install --only-upgrade openjdk-11-jdk -y
+					sudo apt-get install --only-upgrade openjdk-11-jre -y
 				else
 					echo
 					echo
@@ -116,7 +116,7 @@ php(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Php selected."
-					sudo apt-get install --only-upgrade php
+					sudo apt-get install --only-upgrade php -y
 				else
 					echo
 					echo
@@ -154,8 +154,8 @@ nodejs(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Nodejs selected."
-					sudo apt-get install --only-upgrade nodejs
-					sudo apt-get install --only-upgrade npm
+					sudo apt-get install --only-upgrade nodejs -y
+					sudo apt-get install --only-upgrade npm -y
 				else
 					echo
 					echo
@@ -193,7 +193,7 @@ apache2(){
 					echo
   					echo -e "\e[92mUpgrade Apache2 selected."
 
-					sudo apt-get install --only-upgrade apache2
+					sudo apt-get install --only-upgrade apache2 -y
 				else
 					echo
 					echo
@@ -230,7 +230,7 @@ nginx(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Nginx selected."
-					sudo apt-get install --only-upgrade nginx
+					sudo apt-get install --only-upgrade nginx -y
 				else
 					echo
 					echo
@@ -267,7 +267,7 @@ vim(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Vim selected."
-					sudo apt-get install --only-upgrade vim
+					sudo apt-get install --only-upgrade vim -y
 				else
 					echo
 					echo
@@ -293,13 +293,12 @@ sublime-text(){
             echo -e "\e[31mNo Previous Package Found\e[0m"
             echo -e "\e[33m Downloading & Installing Packages.....\e[0m"
 
+			wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+			sudo apt install apt-transport-https
+			echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 			update
-			sudo apt install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
-			sudo snap install curl
-			curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-			sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+			sudo apt install sublime-text -y
 
-				
 			else
             	echo -e "\e[32m Already installed"
 				read -e -p "Check for Update(Latest Version) and Install ? [Y/n] " RESP
@@ -308,7 +307,7 @@ sublime-text(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Sublime-text selected."
-					sudo apt-get install --only-upgrade sublime-text
+					sudo apt-get install --only-upgrade sublime-text -y
 				else
 					echo
 					echo
@@ -348,7 +347,7 @@ vscode(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade VScode selected."
-					sudo apt-get install --only-upgrade code
+					sudo apt-get install --only-upgrade code -y
 				else
 					echo
 					echo
@@ -385,7 +384,7 @@ codeblocks(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Codeblocks selected."
-					sudo apt-get install --only-upgrade codeblocks
+					sudo apt-get install --only-upgrade codeblocks -y
 				else
 					echo
 					echo
@@ -421,7 +420,7 @@ chrome(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Google Chrome selected."
-					sudo apt-get install --only-upgrade google-chrome-stable
+					sudo apt-get install --only-upgrade google-chrome-stable -y
 				else
 					echo
 					echo
@@ -460,7 +459,7 @@ firefox(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Mozila Firefox selected."
-					sudo apt-get install --only-upgrade firefox
+					sudo apt-get install --only-upgrade firefox -y
 				else
 					echo
 					echo
@@ -499,7 +498,7 @@ brave(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Brave Browser selected."
-					sudo apt-get install --only-upgrade brave-browser
+					sudo apt-get install --only-upgrade brave-browser -y
 				else
 					echo
 					echo
@@ -539,7 +538,7 @@ edge(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Microsoft Edge selected."
-					sudo apt-get install --only-upgrade microsoft-edge-dev
+					sudo apt-get install --only-upgrade microsoft-edge-dev -y
 				else
 					echo
 					echo
@@ -577,7 +576,7 @@ vlc(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade VLC Media Player selected."
-					sudo apt-get install --only-upgrade vlc
+					sudo apt-get install --only-upgrade vlc -y
 				else
 					echo
 					echo
@@ -615,7 +614,7 @@ xbmc(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade XBMC-kodi Media Player selected."
-					sudo apt-get install --only-upgrade kodi
+					sudo apt-get install --only-upgrade kodi -y
 				else
 					echo
 					echo
@@ -652,7 +651,7 @@ mplayer(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade Mplayer Media Player selected."
-					sudo apt-get install --only-upgrade mplayer-gui
+					sudo apt-get install --only-upgrade mplayer-gui -y
 				else
 					echo
 					echo
@@ -689,7 +688,7 @@ smp(){
 					echo
 					echo
   					echo -e "\e[92mUpgrade SMP Media Player selected."
-					sudo apt-get install --only-upgrade smplayer
+					sudo apt-get install --only-upgrade smplayer -y
 				else
 					echo
 					echo
